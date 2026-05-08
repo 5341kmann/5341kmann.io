@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The personal website of Grant Sackmann updated with images documenting his professional and academic activity. Additionly, embededings to his resume and further contacts">
-    <title>Grant Sackmann Personal Website</title>
+    <meta
+      name="description"
+      content="The personal website of Grant Sackmann. Discover his professional experience, academic research, and portfolio at Grinnell College."
+    />
+    <title>Grant Sackmann | Personal Website</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -15,264 +18,288 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div class="container my-header">
-      <div class="row">
-        <div class="col-sm-2 gen-col my-center logo-col">
+    <header class="container mt-4 mb-5">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-12 col-md-2 mb-3 mb-md-0 d-flex justify-content-center">
           <img
             src="images/GSlogo.png"
-            class="img-fluid my-logo"
-            alt="site logo"
-            meta="Personal Site logo"
+            class="img-fluid site-logo"
+            alt="Grant Sackmann Logo"
           />
         </div>
-        <div class="col gen-col name">
-          <h2 class="my-text my-name">Grant Sackmann</h2>
+        <div
+          class="col-12 col-md-7 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-start"
+        >
+          <h1 class="my-name mb-0">Grant Sackmann</h1>
         </div>
-        <div class="col-sm-3 gen-col my-center my-button">
+        <div
+          class="col-12 col-md-3 d-flex justify-content-center justify-content-md-end"
+        >
           <a
             href="content/Grant_Sackmann_Resume.pdf"
-            aria-label="redirect button to my resume."
             target="_blank"
+            class="btn btn-primary custom-btn text-nowrap"
+            aria-label="Open Grant Sackmann's Resume in a new tab"
           >
-            <button class="btn btn-primary my-button" style="text-wrap: nowrap">
-              My Resume
-            </button>
+            My Resume
           </a>
         </div>
       </div>
-    </div>
-    <div class="container" id="bio">
-      <div class="row">
-        <div class="col-sm my-center" id="headshot-col">
-          <img
-            src="images/headshot.webp"
-            alt="Portrait photo of Grant Sackmann"
-            meta="Portrait photo, Grant Sackmann"
-            class="img-fluid"
-            id="headshot-photo"
-          />
+    </header>
+
+    <main>
+      <section class="container" id="bio">
+        <div class="row align-items-center mb-5">
+          <div
+            class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center"
+          >
+            <img
+              src="images/headshot.webp"
+              alt="Portrait photo of Grant Sackmann"
+              class="img-fluid headshot-photo shadow-sm"
+            />
+          </div>
+          <div
+            class="col-12 col-md-8 text-center text-md-start fs-5 text-dark-custom"
+          >
+            <p>
+              Hello, my name is Grant Sackmann. I am a graduate of the
+              <a
+                href="https://www.scgssm.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                >South Carolina Governor's School for Science and Mathematics</a
+              >
+              and a current Sophomore at
+              <a
+                href="https://www.grinnell.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Grinnell College</a
+              >
+              studying Computer Science.
+            </p>
+          </div>
         </div>
-        <div class="col-sm-8 my-center" id="bio-paragraph">
-          <p class="my-text">
-            Hello my name is Grant Sackmann. I am a graduate of
-            <a href="https://www.scgssm.org" target="_blank"
-              >South Carolina Governor's School for Science and Mathematics</a
-            >
-            and current Sophomore at
-            <a href="https://www.grinnell.edu" target="_blank"
-              >Grinnell College</a
-            >
-            studying computer science.
+        <div class="row text-center mt-5 mb-4">
+          <p class="fs-4 fw-light text-dark-custom">
+            Look through the carousel to see what I've been up to!
           </p>
         </div>
-      </div>
-      <div class="row my-center transition">
-        <p class="my-text transition-sentence">
-          Look through the carousel to see what I've been up to!
-        </p>
-      </div>
-    </div>
-    <div class="container my-carousel">
-      <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="content">
-              <img
-                src="images/carousel/permafrostsampling 2.webp"
-                alt="sampling permafrost in Alaska."
-                meta="University of Alaska Fairbanks, Grinnell College, Special topic course, BIO-195, microbiology, student research"
-                class="img-fluid"
-              />
-              <p class="my-caption my-text">
-                Sampling permafrost layer in Fairbanks, Alaska for DNA
-                sequencing.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/habesha.webp"
-                class="img-fluid"
-                meta="Grinnell College Student Organization, Joe Rosenfield Center, habesha, Ethiopian"
-                alt="Habesha Student Organization "
-              />
-              <p class="my-caption my-text">
-                Habesha Student Organization group photo.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/wcconstruction.webp"
-                meta="Grinnell College STEW Makerspace, Wilson Center Catalyst Fund,"
-                alt="Makerspace student construction"
-                class="img-fluid"
-              />
-              <p class="my-caption my-text">
-                Constructing testing platform for Wilson Center funded
-                entrepreneurial venture.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/rodentsampling.webp"
-                alt="South African savanna rodent sampling"
-                class="img-fluid"
-                meta="Grinnell College Global Learning Program, fieldwork, rodent sampling, Special topic course, Mpumalanga South Africa, Kruger National Park, Organization for tropical studies, Skukuza Science Leadership Initiative"
-              />
-              <p class="my-caption my-text">
-                Processing rodent samples in Kruger National Park.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/salecture.webp"
-                alt="Savanna ecology field lecture in South Africa"
-                class="img-fluid"
-                meta="Grinnell College Global Learning Program, savanna ecology, student research, Mpumalanga South Africa, Kruger National Park, Organization for tropical studies, South African savanna"
-              />
-              <p class="my-caption my-text">
-                Special topic biology class receiving lecture on savanna ecology
-                in South Africa.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/gwc.webp"
-                alt="Girls Who Code Afterschool program"
-                class="img-fluid"
-                meta="Girls Who Code, Grinnell Middle School, Iowa, Minorities in STEM"
-              />
-              <p class="my-caption my-text">
-                Lead Facilitator for Girls Who Code at local middle school.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/grinnellcomputingclub.webp"
-                alt="Grinnell College Computing Club photo"
-                class="img-fluid"
-                meta="Grinnell College Computer Science, Grinnell College Student Organization"
-              />
-              <p class="my-caption my-text">
-                Grinnell Computing Club group photo.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/summercamp.webp"
-                alt="South Carolina Governor's School for Science and Mathematics day camp"
-                class="img-fluid"
-                meta="South Carolina Governor's School for Science and Mathematics, summer day camp"
-              />
-              <p class="my-caption my-text">
-                Teaching Assistant for South Carolina Governor's Shool iTEAMS
-                Xtreme day camp.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/gssmgraduation.webp"
-                alt="South Carolina Governor's School for Science and Mathematics Class of 2023 Graduation"
-                class="img-fluid"
-                meta="South Carolina Governor's School for Science and Mathematics Graduation, Class of 2023"
-              />
-              <p class="my-caption my-text">
-                Graduating from South Carolina Governor's School for Science and
-                Mathematics.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/engageoutreach.webp"
-                alt="South Carolina Governor's School for Science and Mathematics Outreach program"
-                class="img-fluid"
-                meta="South Carolina Governor's School School for Science and Mathematics ENGAGE, Robotics outreach"
-              />
-              <p class="my-caption my-text">
-                Demoing FTC robot to South Carolina Governor's School ENGAGE
-                Robotics outreach class.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="content">
-              <img
-                src="images/carousel/modernphysics.webp"
-                alt="Modern Physics Students photo"
-                class="img-fluid"
-                meta="South Carolina Governor's School for Science and Mathematics physics, Einstein's special relativity, Mark Godwin's Physics Class"
-              />
-              <p class="my-caption my-text">
-                High School Modern Physics class adapting Einstein's mass-energy
-                equivalence for special relativity.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          alt="button to view previous image in carousel."
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
+      </section>
+
+      <section class="container mb-5">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide custom-carousel shadow-sm bg-white"
+          data-bs-ride="carousel"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          alt="Button to view next image in carousel."
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <hr />
-    <div class="container my-footer">
-      <div class="row">
-        <div class="col-6 my-connect">
-          <p class="my-text">Connect With Me!</p>
-        </div>
-        <div class="col-6">
-          <div class="row">
-            <a href="https://maps.app.goo.gl/7xvYwbXGJJKSy4Eq8" target="_blank">
-              <p class="my-text address-text">
-                1115 8th Ave, #4110<br />Grinnell, IA,<br />50112 United States
-              </p>
-            </a>
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/permafrostsampling 2.webp"
+                  alt="Sampling permafrost layer in Fairbanks, Alaska for DNA sequencing"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Sampling permafrost layer in Fairbanks, Alaska for DNA
+                  sequencing.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/habesha.webp"
+                  class="carousel-img img-fluid"
+                  alt="Habesha Student Organization group photo at Grinnell College"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Habesha Student Organization group photo.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/wcconstruction.webp"
+                  alt="Constructing testing platform for Wilson Center funded entrepreneurial venture"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Constructing testing platform for Wilson Center funded
+                  entrepreneurial venture.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/rodentsampling.webp"
+                  alt="Processing rodent samples in Kruger National Park"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Processing rodent samples in Kruger National Park.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/salecture.webp"
+                  alt="Special topic biology class receiving lecture on savanna ecology in South Africa"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Special topic biology class receiving lecture on savanna
+                  ecology in South Africa.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/gwc.webp"
+                  alt="Lead Facilitator for Girls Who Code at local middle school"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Lead Facilitator for Girls Who Code at local middle school.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/grinnellcomputingclub.webp"
+                  alt="Grinnell Computing Club group photo"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Grinnell Computing Club group photo.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/summercamp.webp"
+                  alt="Teaching Assistant for South Carolina Governor's School iTEAMS Xtreme day camp"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Teaching Assistant for South Carolina Governor's School iTEAMS
+                  Xtreme day camp.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/gssmgraduation.webp"
+                  alt="Graduating from South Carolina Governor's School for Science and Mathematics"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Graduating from South Carolina Governor's School for Science
+                  and Mathematics.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/engageoutreach.webp"
+                  alt="Demoing FTC robot to South Carolina Governor's School ENGAGE Robotics outreach class"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  Demoing FTC robot to South Carolina Governor's School ENGAGE
+                  Robotics outreach class.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center h-100 p-4"
+              >
+                <img
+                  src="images/carousel/modernphysics.webp"
+                  alt="High School Modern Physics class adapting Einstein's mass-energy equivalence"
+                  class="carousel-img img-fluid"
+                />
+                <p class="mt-3 text-center fw-light text-dark-custom">
+                  High School Modern Physics class adapting Einstein's
+                  mass-energy equivalence for special relativity.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="row socials">
-            <a
-              href="mailto:grant.sackmann@icloud.com"
-              target="_blank"
-              alt="compose email to grant.sackmann@icloud.com"
-              aria-label="Email me."
-            >
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container py-4 border-top border-secondary">
+      <div class="row text-center text-md-start">
+        <div
+          class="col-12 col-md-6 mb-3 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start"
+        >
+          <p class="fs-4 mb-0 text-dark-custom">Connect With Me!</p>
+        </div>
+        <div
+          class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end"
+        >
+          <a
+            href="https://maps.google.com/?q=1115+8th+Ave,+Grinnell,+IA+50112"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mb-3 text-center text-md-end text-decoration-none text-dark-custom fw-normal"
+          >
+            1115 8th Ave, #4110<br />Grinnell, IA<br />50112 United States
+          </a>
+          <div class="d-flex gap-3">
+            <a href="mailto:grant.sackmann@icloud.com" aria-label="Email me">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -283,7 +310,6 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="feather feather-mail"
               >
                 <path
                   d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
@@ -294,8 +320,8 @@
             <a
               href="https://www.linkedin.com/in/grant-sackmann"
               target="_blank"
-              alt="Linkedin profile grant-sackmann"
-              aria-label="See my Linkedin profile."
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -307,7 +333,6 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="feather feather-linkedin"
               >
                 <path
                   d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
@@ -319,8 +344,8 @@
             <a
               href="https://www.instagram.com/grantis_sackmn"
               target="_blank"
-              alt="Instagram handle @grantis_sackmann"
-              aria-label="Go to my Instagram."
+              rel="noopener noreferrer"
+              aria-label="Instagram profile"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -332,7 +357,6 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="feather feather-instagram"
               >
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path
@@ -344,23 +368,19 @@
           </div>
         </div>
       </div>
-      <div class="row my-copyright">
-        <p>Made with Bootstrap &copy Grant Sackmann 2024</p>
+      <div class="row mt-4">
+        <div
+          class="col-12 text-center text-muted fst-italic"
+          style="font-size: 0.85rem"
+        >
+          <p class="mb-0">Made with Bootstrap &copy; Grant Sackmann 2024</p>
+        </div>
       </div>
-    </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
   </body>
