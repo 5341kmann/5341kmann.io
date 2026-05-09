@@ -38,13 +38,44 @@ a:hover {
   font-size: 3rem;
   color: var(--my-font-color);
 }
+.my-h2 {
+  display: flex;
+  align-items: center;
+  /* font-style: oblique; */
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--my-font-color);
+}
+
+.my-h2::before,
+.my-h2::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--my-font-color);
+}
+
+/* Spacing around the text on mobile */
+.my-h2::before {
+  margin-right: 1rem;
+}
+.my-h2::after {
+  margin-left: 1rem;
+}
+
+/* Desktop behavior: Hide the left line so text snaps to the left */
+@media (min-width: 768px) {
+  .my-h2::before {
+    display: none;
+  }
+}
 
 /* Custom Button overrides */
 .btn.custom-btn {
-  border-radius: 0;
+  border-radius: 0px;
   background-color: var(--my-background-color);
   color: var(--my-font-color);
-  border: 2px solid var(--my-font-color);
+  border: 1.8px solid var(--my-font-color);
   font-family: var(--my-font-family);
   transition: all 0.2s ease-in-out;
 }
@@ -93,4 +124,23 @@ a:hover {
 /* Security: Ensure svg links match hover color */
 .gap-3 a:hover svg {
   stroke: var(--my-contrast-color);
+}
+
+/* Accordion Theme Overrides */
+.accordion {
+  /* Backgrounds */
+  --bs-accordion-bg: var(--my-background-color);
+  --bs-accordion-btn-bg: var(--my-background-color);
+
+  /* Active (Clicked) State Colors */
+  --bs-accordion-active-bg: var(--my-contrast-color);
+
+  --bs-accordion-active-color: var(--my-background-color);
+
+  --bs-accordion-border-color: var(--my-font-color);
+  --bs-accordion-btn-color: var(--my-font-color);
+
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(95, 128, 79, 0.25);
+
+  --bs-border-radius: 0rem;
 }
