@@ -1,27 +1,13 @@
 {
-  "devDependencies": {
-    "vite": "^8.0.11"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
   "name": "5341kmann.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "detect-libc": "^2.1.2",
-    "fdir": "^6.5.0",
-    "lightningcss": "^1.32.0",
-    "nanoid": "^3.3.12",
-    "picocolors": "^1.1.1",
-    "picomatch": "^4.0.4",
-    "postcss": "^8.5.14",
-    "rolldown": "^1.0.0-rc.18",
-    "source-map-js": "^1.2.1",
-    "tinyglobby": "^0.2.16"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -34,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/5341kmann/5341kmann.io/issues"
   },
-  "homepage": "https://github.com/5341kmann/5341kmann.io#readme"
+  "homepage": "https://github.com/5341kmann/5341kmann.io#readme",
+  "devDependencies": {
+    "vite": "^8.0.11"
+  }
 }
