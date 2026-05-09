@@ -22,8 +22,10 @@ body {
 
 a {
   color: var(--my-font-color);
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color 0.2s ease-in-out;
+  /* text-decoration: none; */
+  text-underline-offset: 2px;
 }
 
 a:hover {
@@ -65,11 +67,11 @@ a:hover {
 }
 
 /* Carousel Adjustments */
+
 .custom-carousel {
   height: 60vh; /* Responsive height based on viewport */
   min-height: 400px;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .carousel-img {
