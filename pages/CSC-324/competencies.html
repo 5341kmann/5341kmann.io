@@ -97,12 +97,34 @@
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Medium-scale abstraction visual"
-                />
+                <pre><code class="language-python">
+class MailServer:
+
+    def __init__(self, hostname: str, port: int) -> None:
+        """MailServer Constructor
+
+        Args:
+            server (str): smtp server hostname.
+            port (int): The preferred outbound mail traffic port. MailServer will attempt the preferred port. If the provided port is unreachable MailServer will default to one of the default secure SMTP ports.
+            Default ports = [587, 465, 2525]
+        """
+
+        if not self._is_resolvable_host(hostname):
+            raise ValueError("Hostname is not resolvable.")
+        self.hostname = hostname
+
+        if MailServer._is_smtp_server_live(hostname, port, timeout=5):
+            self.port = port
+        else:
+            for port in [587, 465, 2525]:
+                if MailServer._is_smtp_server_live(hostname, port, timeout=5):
+                    self.port = port
+                    break
+            if not self.port:
+                raise ValueError("Provided host has no reachable secure outbound port")
+
+
+                </code></pre>
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
@@ -677,7 +699,7 @@
 
       <h2 class="my-h2 mb-4 mt-5 pt-4">Advanced Competencies</h2>
 
-      <h3 >Development</h3>
+      <h3>Development</h3>
       <div class="accordion mb-4 shadow-sm" id="accordion-adv-dev">
         <div class="accordion-item custom-accordion-item">
           <h2 class="accordion-header" id="heading-adv-dev-1">
