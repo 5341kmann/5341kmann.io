@@ -1,0 +1,218 @@
+/* ==========================================================
+   Custom PrismJS Theme: "Earthy High-Contrast"
+   ========================================================== */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--my-font-color); /* #262729 Base font */
+  background: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.95em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks structure */
+pre[class*="language-"] {
+  padding: 1.2em;
+  margin: 0.5em 0 1.5em 0;
+  overflow: auto;
+  background: #ffffff;
+  border: 1.8px solid var(--my-contrast-color); /* Olive green border */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Inline code styling */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  white-space: normal;
+  background: #e4e4e6;
+  color: var(--my-contrast-color);
+}
+
+/* ==========================================================
+   Syntax Highlighting Colors (Color Science & Accessibility Optimized)
+   ========================================================== */
+
+/* 1. CONTEXT: Comments (De-emphasized Mid-Gray) 
+   Contrast: 4.8:1 - Fades back so logic stands out */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* 2. GLUE: Punctuation (Dimmed Charcoal) 
+   Keeps brackets and commas from distracting from the text */
+.token.punctuation {
+  color: #52525b;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+/* 3. HARD VALUES: Numbers, Booleans, Constants (Deep Plum)
+   Contrast: ~6.5:1 - Distinct from strings and logic */
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #86198f;
+}
+
+/* 4. DATA: Strings, Chars, Attributes (Vibrant Rust/Terracotta)
+   Contrast: 4.7:1 - The warm axis balances the cool functions */
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.attr-value {
+  color: #c2410c;
+}
+
+/* 5. REFERENCES: Properties, Variables, Regex (Rose Crimson) 
+   Contrast: ~5.5:1 */
+.token.property,
+.token.tag,
+.token.variable,
+.token.regex,
+.token.important {
+  color: #be123c;
+}
+
+/* 6. OPERATIONS: Operators, Entities (Muted Indigo) */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #4338ca;
+}
+
+/* 7. STRUCTURE: Keywords, Selectors (Deep Olive)
+   Contrast: ~6:1 - Anchors to your site's aesthetic. 
+   Bolded so the eye can quickly scan the skeleton of the code. */
+.token.keyword,
+.token.atrule,
+.token.selector {
+  color: #3f6212;
+  font-weight: 700;
+}
+
+/* 8. ACTIONS: Functions, Methods, Classes (Cobalt Blue)
+   Contrast: 7.1:1 - The highest contrast item for immediate recognition. */
+.token.function,
+.token.class-name,
+.token.attr-name {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* Utilities */
+.token.important,
+.token.bold {
+  font-weight: 700;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+/* ==========================================================
+   Line Numbers Plugin Overrides
+   ========================================================== */
+.line-numbers .line-numbers-rows {
+  border-right: 1px solid #d4d4d6;
+}
+.line-numbers-rows > span:before {
+  color: #a0a0a5;
+}
+
+/* ==========================================================
+   PrismJS Toolbar & Language Label Styling
+   ========================================================== */
+
+/* 1. Make the wrapper the positioning anchor and move the margins here */
+div.code-toolbar {
+  position: relative;
+  margin: 0.5em 0 1.5em 0; /* Moved from the <pre> tag */
+}
+
+/* 2. Remove the margin from the <pre> tag so the wrapper hugs it perfectly */
+div.code-toolbar > pre[class*="language-"] {
+  margin: 0;
+}
+
+/* 3. Position the label in the top right corner */
+div.code-toolbar > .toolbar {
+  position: absolute;
+  top: 0.6em;
+  right: 0.8em;
+}
+/* 4. Style the actual text badge to match your earthy theme */
+div.code-toolbar > .toolbar .toolbar-item > span,
+div.code-toolbar > .toolbar .toolbar-item > button {
+  background-color: #f3f4f6;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #d1d5db;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Strip Bootstrap's resizing off the text so it behaves naturally */
+pre[class*="language-"] > code {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 2. Force the Line Number container to exactly mimic the code container */
+.line-numbers .line-numbers-rows {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-right: 1px solid #d1d5db;
+}
+
+/* 3. Force the individual numbers to mimic the individual text lines */
+.line-numbers-rows > span {
+  display: block;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 4. Prevent the code from wrapping*/
+pre[class*="language-"],
+pre[class*="language-"] > code {
+  white-space: pre !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}

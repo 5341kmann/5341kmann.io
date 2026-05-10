@@ -7,7 +7,6 @@ export default defineConfig({
     prismjs({
       languages: ["python"],
       plugins: ['line-numbers', 'show-language'],
-      css: true,
     }),
   ],
   build: {
