@@ -144,3 +144,38 @@ a:hover {
 
   --bs-border-radius: 0rem;
 }
+
+.competency-description {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.competency-description p {
+  margin-bottom: 1.25rem;
+}
+
+.competency-description ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.competency-description li {
+  margin-bottom: 0.5rem;
+}
+
+.competency-description li::marker {
+  color: var(--my-contrast-color);
+}
+
+.scrollable-container {
+  /* 1. Set a maximum height (use pixels, rems, or vh) */
+  max-height: 500px;
+
+  /* 2. Tell the browser to scroll vertically if content exceeds that height */
+  overflow-y: auto;
+
+  /* Optional: Make it look nice */
+  border: 1px solid var(--my-font-color);
+  padding: 16px;
+  /* background-color: #ffffff; */
+}

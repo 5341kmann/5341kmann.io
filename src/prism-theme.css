@@ -3,7 +3,8 @@
    ========================================================== */
 
 code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+code.manual-code {
   color: var(--my-font-color); /* #262729 Base font */
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -34,7 +35,8 @@ pre[class*="language-"] {
 }
 
 /* Inline code styling */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="language-"]
+:not(pre) > code.manual-code {
   padding: 0.1em 0.3em;
   white-space: normal;
   background: #e4e4e6;

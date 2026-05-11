@@ -88,7 +88,7 @@
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/09c0443a12e1751e23b2385fcd3bf232eb6726e7/server/api/mail/MailExchange.py#L25-L168"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -97,14 +97,16 @@
                 </h5>
               </div>
               <div class="mb-4">
-                <pre class="language-python"><code class="line-numbers" >class MailServer:
-
+                <pre
+                  class="language-python"
+                ><code class="line-numbers" >class MailServer:
     def __init__(self, hostname: str, port: int) -> None:
         """MailServer Constructor
 
         Args:
             server (str): smtp server hostname.
-            port (int): The preferred outbound mail traffic port. MailServer will attempt the preferred port. If the provided port is unreachable MailServer will default to one of the default secure SMTP ports.
+            port (int): The preferred outbound mail traffic port. MailServer will attempt the preferred port.
+            If the provided port is unreachable MailServer will default to one of the default secure SMTP ports.
             Default ports = [587, 465, 2525]
         """
 
@@ -241,15 +243,47 @@
             )
         except Exception as e:
             print(f"DELIVERY FAILURE: {e}")
-
               </code></pre>
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    The code sample above demonstrates abstraction of low-level
+                    socket connections, TLS/SSL negotiation, and SMTP protocol
+                    required for outbound mail exchange. By encapsulating the
+                    <!-- prettier-ignore -->
+                    <code class="manual-code"><span class="token class-name">smtplib</span></code>
+                    initialization and exception handling, the caller does not
+                    need to understand network delivery protocols to send an
+                    email.
+                  </p>
+                  <p>
+                    This abstraction is achieved mechanically by wrapping
+                    connection logic and port fallback arrays (for example,
+                    automatically resorting to secure fallback ports like
+                    <!-- prettier-ignore -->
+                    <code class="manual-code"><span class="token number">587</span></code
+                    >,
+                    <!-- prettier-ignore -->
+                    <code class="manual-code"><span class="token number">465</span></code
+                    >, and
+                    <code class="manual-code"
+                      ><span class="token number">2525</span></code
+                    >
+                    ) within internal static methods like
+                    <!-- prettier-ignore -->
+                    <code class="manual-code"><span class="token function">_is_smtp_server_live()</span></code
+                    >. Additionally this abstraction exposes a single,
+                    <!-- prettier-ignore -->
+                    <code class="manual-code"><span class="token function">send_message()</span></code>
+                    that takes formatted mail objects simple mail sendoff. In
+                    the larger program, this allows the daemon.py scheduling
+                    loop to dispatch automated invites without being cluttered
+                    by networking details or connection-state management.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -283,7 +317,7 @@
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/a3a3e7fc869aae6b0920273aacee4834453f0127/server/daemon.py#L184-L230"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -292,19 +326,93 @@
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Medium-scale architecture visual"
-                />
+                <pre><code class="language-python">def _dispatch_cycle(config: Config, server: MailServer) -> None:
+    """A single mail dispatch run. Sweeps database for all events within two weeks and mails out all matching recipients
+
+    Args:
+        config (Config): configuration object from mail environment settings.
+        server (MailServer): MailServer object used for SMTP server exchange.
+    """
+
+    log.info("Checking events within the next two weeks.")
+    events = get_events_within_two_weeks()
+    log.info("Found %d upcoming event(s).", len(events))
+    if not events:
+        return
+
+    matches = 0
+    for event in events:
+        users = [user for user in get_users_for_event_full(event["id"]) if not if_user_emailed_for_event(user, event["id"]) ]
+        if not users:
+            continue
+        unsent_users = users
+        matched = len(unsent_users)
+        matches += matched
+        _send_event_invite(event, unsent_users, config, server)
+
+    log.info("Dispatch cycle complete — %d user(s) matched the current window.", matches)
+
+
+async def run_daemon() -> None:
+    """Call for the asynchronous mail daemon for event mail dispatching.
+    """
+    try:
+        server = MailServer(config.bulk_mail_smtp_url, config.default_smtp_port)
+    except ValueError as exc:
+        log.critical("Cannot reach mail server: %s", exc)
+        return
+
+    while True:
+        try:
+            _dispatch_cycle(config, server)
+        except Exception as exc:
+            log.error("Dispatch cycle error: %s", exc)
+        await asyncio.sleep(10)
+
+
+if __name__ == "__main__":
+    asyncio.run(run_daemon())</code></pre>
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    The above code uses a continuous background worker pattern
+                    to effectively separate the work of orchestrating and
+                    dispatching mail invitations from custom back-end logic. The
+                    daemon.py component polls the database at regular intervals
+                    and triggers mail exchange services to retrieve the relevant
+                    information for dispatching upcoming events to their
+                    associated recipients.
+                  </p>
+                  <p>
+                    This architecture allows for the asynchronous daemon loop to
+                    act as the controller and leaves the handling of data
+                    formatting and delivery to the specialized
+                    <!--prettier-ignore-->
+                    <code class="manual-code"><span class="token class-name">api.mail</span></code
+                    >
+                    layer. The daemon does this by utilizing Python's
+                    <!--prettier-ignore-->
+                    <code class="manual-code"><span class="token builtin">asyncio</span></code
+                    >
+                    for non-blocking execution and sleep cycles.
+                  </p>
+                  <p>
+                    The mail exchange components rely on standard networking
+                    libraries (
+                    <!--prettier-ignore-->
+                    <code class="manual-code"><span class="token class-name">smtplib</span></code>
+                    ,
+                    <!--prettier-ignore-->
+                    <code class="manual-code"><span class="token class-name">email.mime</span></code>
+                    ) and third-party tools like
+                    <!--prettier-ignore-->
+                    <code class="manual-code"><span class="token class-name">icalendar</span></code>
+                    to assemble the specific payloads required by the worker.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -796,12 +904,12 @@
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Collaboration visual"
-                />
+                <iframe
+                  src="/content/PR#29social-won_grinvites.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none"
+                ></iframe>
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
