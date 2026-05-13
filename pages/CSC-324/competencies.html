@@ -468,9 +468,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -523,9 +523,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -581,9 +581,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -636,9 +636,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -691,9 +691,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -746,9 +746,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -767,7 +767,7 @@ if __name__ == "__main__":
               aria-expanded="false"
               aria-controls="collapse-basic-eng-1"
             >
-              Self-learning
+              Infrastructure
             </button>
           </h2>
           <div
@@ -804,14 +804,42 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    The development environment was standardized using VS Code
+                    as the IDE, with Prettier handling automated formatting and
+                    Ruff executing local linting to maintain code cleanliness.
+                    Through GitHub Actions running Super Linter, ensuring all
+                    merged code met formatting standards. Additionally, the
+                    <code class="token class-name">pydantic_settings</code>
+                    library was used to create a project-wide
+                    <code class="token class-name">Config</code> objects for
+                    parsing <code>.env</code> variables (like API keys and SMTP
+                    URLs).
+                  </p>
+                  <p>
+                    Although helpful, the
+                    <code class="token class-name">Config</code> was flagging
+                    Pylance type checker. Pylance continually flagged the
+                    instantiation of the
+                    <code class="token class-name">Config</code> object as
+                    <code class="token string"
+                      >Arguments missing for parameters [...]</code
+                    >, failing to recognize that these values were dynamically
+                    determined at runtime via
+                    <code class="token class-name">Pydantic</code>'s
+                    <code class="token class-name">BaseConfig</code>. Because
+                    the linter provided no helpful alternative for handling this
+                    runtime configuration, the issue was ultimately resolved by
+                    explicitly appending
+                    <code class="token italic"># type: ignore[call-arg]</code>
+                    to a single in class instantiation to bypass the warning.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="accordion-item custom-accordion-item">
           <h2 class="accordion-header" id="heading-basic-eng-2">
             <button
@@ -822,7 +850,7 @@ if __name__ == "__main__":
               aria-expanded="false"
               aria-controls="collapse-basic-eng-2"
             >
-              Process
+              Self-learning
             </button>
           </h2>
           <div
@@ -853,15 +881,42 @@ if __name__ == "__main__":
                   src="/images/placeholder.webp"
                   class="img-fluid rounded border w-100"
                   style="max-height: 400px; object-fit: cover"
-                  alt="Process visual"
+                  alt="Self-learning visual"
                 />
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    My above referenced technology talk addressed modern
+                    front-end web development utilizing the Node Package Manager
+                    (npm) and the Vite build tool. This fit directly into the
+                    Grinvites architecture by enabling the creation of the
+                    user-facing UI where individuals interact and register for
+                    email invitations. Vite proved highly useful by providing
+                    live local rendering, which significantly accelerated
+                    iterative development cycles, while npm offered access to an
+                    extensive ecosystem of library functions necessary for
+                    building a robust front end.
+                  </p>
+                  <p>
+                    The primary strength of these tools was the ease of
+                    dependency management and the rapid compilation speed
+                    provided by Vite. However, one weakness was the high level
+                    of abstraction introduced by npm, which obscures the
+                    underlying dependency system. One sticking point that was
+                    important to be aware of, especially in the case of
+                    server-side deployment, was when local OS-specific
+                    dependencies clashed with deployment on the Linux-based
+                    front-end server during server-side. This was first seen
+                    during GitHub Actions builds. This was resolved by auditing
+                    the package-lock.json to ensure no OS-specific dependencies
+                    were required, flagging incompatible dependencies as
+                    optional, and strictly using packages with cross-platform
+                    and cross-CPU architecture support.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -877,7 +932,7 @@ if __name__ == "__main__":
               aria-expanded="false"
               aria-controls="collapse-basic-eng-3"
             >
-              Collaboration
+              Process
             </button>
           </h2>
           <div
@@ -904,8 +959,87 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
+                <img
+                  src="/images/placeholder.webp"
+                  class="img-fluid rounded border w-100"
+                  style="max-height: 400px; object-fit: cover"
+                  alt="Process visual"
+                />
+              </div>
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div class="mt-4">
+                <h6 class="fw-bold text-dark-custom">Description</h6>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    To manage and distribute work, the team utilized GitHub
+                    Projects and Issues. During sprint reviews, broad
+                    development goals were decomposed into smaller, actionable
+                    tasks that were then translated into formal GitHub Issues
+                    and assigned to respective team members.
+                  </p>
+                  <p>
+                    In the beginning, the group followed through on this
+                    structured process quite well. However, as the semester
+                    progressed, the convenience of instant messaging via
+                    iMessage for quick updates eroded the team's reliance on
+                    formal tracking.
+                  </p>
+                  <p>
+                    The primary barrier of the formal process was the friction
+                    of context-switching, opening a desktop window to manually
+                    update GitHub Project statuses was far more overhead
+                    compared to sending a quick text message. This lead to the
+                    team to neglecting the issue board for things other than
+                    retroactive bookkeeping. However, I suspect on larger
+                    development teams and more realistic working environments
+                    tools like Github issues would be very resourceful.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item custom-accordion-item">
+          <h2 class="accordion-header" id="heading-basic-eng-4">
+            <button
+              class="accordion-button collapsed fw-bold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-basic-eng-4"
+              aria-expanded="false"
+              aria-controls="collapse-basic-eng-4"
+            >
+              Collaboration
+            </button>
+          </h2>
+          <div
+            id="collapse-basic-eng-4"
+            class="accordion-collapse collapse"
+            aria-labelledby="heading-basic-eng-4"
+            data-bs-parent="#accordion-basic-eng"
+          >
+            <div class="accordion-body">
+              <!--Collaboration 1--->
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0 text-dark-custom">
+                  #1 | My Contribution
+                  <span class="text-secondary fw-light fst-italic fs-6"
+                    >|
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="text-secondary text-decoration-none"
+                      >Reference Link</a
+                    ></span
+                  >
+                </h5>
+              </div>
+              <div class="mb-4">
                 <iframe
-                  src="/content/PR#29social-won_grinvites.html"
+                  src="/content/social_won_grinvites_pr_29.html"
                   width="100%"
                   height="600px"
                   style="border: none"
@@ -914,9 +1048,181 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    The above PR and Code Review was a collaboration with Judd
+                    focused on designing the user onboarding process to ensure
+                    clarity distinction between a user's account registration
+                    email and their calendar destination email.
+                  </p>
+                  <p>
+                    My role involved detailing the technical flow of calendar
+                    invitations from a recipient's inbox to the final population
+                    in their calendar application (e.g., email is Apple Mail
+                    calendar is Google Calendar). We had to weigh the technical
+                    feasibility against user experience.
+                  </p>
+                  <p>
+                    Due to technical labor and the risk of confusing users, we
+                    settled on users simply signing up with a single email and
+                    communicating that all invites were going to be sent to
+                    their registered email.
+                  </p>
+                </div>
+              </div>
+              <!--Collaboration 2--->
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0 text-dark-custom">
+                  #2 | My Contribution
+                  <span class="text-secondary fw-light fst-italic fs-6"
+                    >|
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="text-secondary text-decoration-none"
+                      >Reference Link</a
+                    ></span
+                  >
+                </h5>
+              </div>
+              <div class="mb-4">
+                <iframe
+                  src="/content/social_won_grinvites_occurance_finding_commit_48d8906.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none"
+                ></iframe>
+              </div>
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div class="mt-4">
+                <h6 class="fw-bold text-dark-custom">Description</h6>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    I worked with Jafar to resolve a technical bug regarding how
+                    to indicate/store recurring events in accordance with the
+                    RFC 5545 specification.
+                  </p>
+                  <p>
+                    I initially proposed to compute recurrence formulas (RRULE)
+                    using data scraped from LiveWhale or 25Live, since this
+                    would allow for simple complete one-time event delivery.
+                    However, because 25Live was not reliably accessible and
+                    LiveWhale flattened recurrence information, I suggested an
+                    explicit listing of occurrences (RDATE) to simply store the
+                    flattened LiveWhale data.
+                  </p>
+                  <p>
+                    Additionally, with the use of RDATE over RRULE, to handle
+                    indefinite recurring events without spamming users or
+                    extending our scraping window, we, as a team, collectively
+                    agreed on a bi-weekly invitation cadence that batched
+                    occurrences for the upcoming two weeks.
+                  </p>
+                </div>
+              </div>
+              <!--Collaboration 3--->
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0 text-dark-custom">
+                  #3 | My Contribution
+                  <span class="text-secondary fw-light fst-italic fs-6"
+                    >|
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="text-secondary text-decoration-none"
+                      >Reference Link</a
+                    ></span
+                  >
+                </h5>
+              </div>
+              <div class="mb-4">
+                <iframe
+                  src="/content/social_won_grinvites@e867914.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none"
+                ></iframe>
+              </div>
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div class="mt-4">
+                <h6 class="fw-bold text-dark-custom">Description</h6>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    I collaborated with Owen to resolve a critical bug where
+                    users were receiving repeat invitations for the same event
+                    on every daemon cycle.
+                  </p>
+                  <p>
+                    The initially proposed solution was to mark an event as sent
+                    after first time delivery. However, I further explained the
+                    technical operation of the mail daemon which made it clear
+                    that simply marking an event as "sent" globally would block
+                    newly registered users who still needed that event's invite.
+                  </p>
+                  <p>
+                    I provided Owen with the exact database query specifications
+                    required to track dispatch status on a per-user basis rather
+                    than a per-event basis. This allowed Owen to implement the
+                    necessary database injection and retrieval functions to
+                    effectively halt the repeated emails without locking out new
+                    event registrants.
+                  </p>
+                </div>
+              </div>
+              <!--Collaboration 4--->
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0 text-dark-custom">
+                  #4 | My Contribution
+                  <span class="text-secondary fw-light fst-italic fs-6"
+                    >|
+                    <a
+                      href="/content/social_won_grinvites_issue_24.html"
+                      target="_blank"
+                      class="text-secondary text-decoration-none"
+                      >Reference Link</a
+                    ></span
+                  >
+                </h5>
+              </div>
+              <div class="mb-4">
+                <iframe
+                  src="/content/social_won_grinvites_issue_24.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none"
+                ></iframe>
+              </div>
+              <hr class="mx-4 text-secondary opacity-25" />
+              <div class="mt-4">
+                <h6 class="fw-bold text-dark-custom">Description</h6>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    This issue above necessitated an in-person meeting to
+                    establish the exact data requirements for a complete, valid
+                    email invitation.
+                  </p>
+                  <p>
+                    My contribution was outlining the requirements of the RFC
+                    standard to successfully generate .ics attachments, mapping
+                    out exactly what fields (UID, timestamps, organizer, etc.)
+                    were mandatory and which were optional.
+                  </p>
+                  <p>
+                    This technical specification was paramount as it dictated
+                    the constraints for the web scraping module, the
+                    architecture of our SQL database, and the specific inputs
+                    required from users during the front-end onboarding flow.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -974,9 +1280,28 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    The architecture above is heavily dictated by the domain of
+                    automated scheduling, which requires strict compliance with
+                    RFC 5545 (iCalendar) and RFC 5322 (Internet Message Format).
+                    Because email clients (like Google Calendar or Outlook)
+                    demand exact precise MIME multipart structures and base64
+                    encoding to render invites properly, the architecture
+                    implements a specialized wrapper factories like RequestEvent
+                    and ICSFile. Manually assembling string-based iCalendar text
+                    and correlating attendees is highly error-prone; a missing
+                    PRODID or an incorrectly formatted vCalAddress could cause
+                    the receiving client to silently reject the payload. The
+                    ICSFile and RequestEvent classes solve this by enforcing
+                    these standards natively through type hinting and automated
+                    MIME header injection. By abstracting the domain-agnostic
+                    database records into these compliant objects, the solution
+                    guarantees that all dispatched calendar data is
+                    syntactically valid before it ever reaches the SMTP
+                    transport layer.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -991,6 +1316,7 @@ if __name__ == "__main__":
               data-bs-target="#collapse-adv-dev-2"
               aria-expanded="false"
               aria-controls="collapse-adv-dev-2"
+              disabled
             >
               Security
             </button>
@@ -1029,9 +1355,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1049,6 +1375,7 @@ if __name__ == "__main__":
               data-bs-target="#collapse-adv-ver-1"
               aria-expanded="false"
               aria-controls="collapse-adv-ver-1"
+              disabled
             >
               Testing technologies
             </button>
@@ -1087,9 +1414,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1107,6 +1434,7 @@ if __name__ == "__main__":
               data-bs-target="#collapse-adv-des-1"
               aria-expanded="false"
               aria-controls="collapse-adv-des-1"
+              disabled
             >
               Design
             </button>
@@ -1145,9 +1473,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1162,6 +1490,7 @@ if __name__ == "__main__":
               data-bs-target="#collapse-adv-des-2"
               aria-expanded="false"
               aria-controls="collapse-adv-des-2"
+              disabled
             >
               Accessible design
             </button>
@@ -1200,9 +1529,9 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1258,9 +1587,40 @@ if __name__ == "__main__":
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
-                <p class="text-dark-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
+                <div class="competency-description text-dark-custom">
+                  <p>
+                    The codebase exemplifies engineering quality through robust
+                    data validation and defensive programming. For instance,
+                    before an email is even attempted, the MailAddress
+                    abstraction utilizes a dns.resolver to actively verify that
+                    the target domain possesses an active Mail Exchange (MX)
+                    record (lines 66-73), preventing the SMTP server from
+                    wasting resources and api requests on undeliverable
+                    exchanges. Additionally, strong type hinting through
+                    parameter tying and verbose custom exceptions (like
+                    InvalidCalendarAddress) ensure high readability and
+                    predictable failure states.
+                  </p>
+                  <p>
+                    The codebase still stands to improve greatly in handling
+                    incomplete integration states and localized error
+                    swallowing. In daemon.py (lines 112-114), crucial database
+                    update logic meant to flag a user as emailed remains
+                    localized and tied to the database state, clearing after
+                    every database initialization, allows the daemon to
+                    repeatedly send the same invite on every cycle if left
+                    unpatched. Furthermore, several try/except blocks in
+                    mail_exchange.py catch blanket exceptions without proper
+                    logging the trace, which can silence potentially critical
+                    debugging information.
+                  </p>
+                  <p>
+                    Given more time, these bare except clauses would be replaced
+                    with specific error catches, and the database state-update
+                    function would be fully implemented and tested to ensure
+                    idempotency.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1361,7 +1721,10 @@ if __name__ == "__main__":
           class="col-12 text-center text-muted fst-italic"
           style="font-size: 0.85rem"
         >
-          <p class="mb-0">Made with Bootstrap © Grant Sackmann 2026</p>
+          <p class="mb-0">
+            Made possible with Bootstrap, Vite, Prism.js, and Github Pages ©
+            Grant Sackmann 2026
+          </p>
         </div>
       </div>
     </footer>
