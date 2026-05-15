@@ -1485,7 +1485,6 @@ if __name__ == "__main__":
               data-bs-target="#collapse-adv-dev-2"
               aria-expanded="false"
               aria-controls="collapse-adv-dev-2"
-              disabled
             >
               Security
             </button>
@@ -1505,7 +1504,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/back-end/mail-daemon/server/api/db_functions.py#L188-L191"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1514,18 +1513,64 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Security visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--            ALT="SECURITY VISUAL"             -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    Analyzing the security of the Grinvites project, the surface
+                    area involves a few main points where users and external
+                    systems interact with our code. This includes the frontend
+                    web interface where students log in and set up their
+                    filters, the backend API that processes data requests, the
+                    background mail daemon that connects to external servers to
+                    send out calendar invites, and the web scraper that
+                    automatically pulls campus event data from LiveWhale and
+                    25Live.
+                  </p>
+
+                  <p>
+                    Looking at this setup, I identified a few key threats to our
+                    system and suggestion on how we could handle them:
+                  </p>
+
+                  <ul>
+                    <li>
+                      <strong>Email Spamming:</strong> A malicious script could
+                      try to rapidly create fake accounts using outside email
+                      addresses to use our mail daemon for spam. To mitigate
+                      this, we rely on Supabase to require email verification.
+                      we could further restrict user tennants to valid
+                      @grinnell.edu email addresses.
+                    </li>
+                    <li>
+                      <strong>Data Snooping:</strong> A curious user or outsider
+                      might try to query our backend API directly to look at
+                      other students' schedules or steal email addresses. We
+                      handle this broken access control threat by requiring a
+                      valid login token for backend requests, ensuring users can
+                      only access their own specific database records.
+                    </li>
+                    <li>
+                      <strong>Malicious Event Data:</strong> Someone could
+                      submit a fake event to the main campus calendar containing
+                      harmful code snippets in the description. However, we do
+                      protect our database from injection attacks by using
+                      parameterized SQL queries. On the frontend, React helps us
+                      out by automatically treating any scraped text as plain
+                      text, meaning any sneaky scripts will just show up as
+                      harmless words on the page rather than actually running.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
