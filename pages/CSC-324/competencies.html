@@ -449,7 +449,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/af9dd0547381ae2f58c8a52a42b828b5d4f6184b/server/api/mail/mail_exchange.py#L47-L133"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -458,18 +458,41 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Testing strategies visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--       ALT="TESTING STRATEGIES VISUAL"        -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    This component represents the validation layer for outgoing
+                    email addresses. The code coverage focuses on the string
+                    parsing and logical validation of the RFC specifications for
+                    email formatting. The suite covers boundary cases for both
+                    the local part (e.g., standard alphanumeric, single
+                    characters, common aliases with +, and hyphenation) and the
+                    domain syntax (e.g., subdomains, numeric domains, and
+                    invalid consecutive dots). They isolate specific static
+                    methods (_isValidLocalPart, _isValidDomainSyntax) to assert
+                    expected boolean outcomes based on deterministic inputs.
+                  </p>
+                  <p>
+                    Code that interacts with active network states—such as
+                    _is_resolvable_domain (which relies on live DNS resolution)
+                    or send_message (which requires an active SMTP
+                    handshake)—was intentionally left uncovered by this specific
+                    suite. Covering these would introduce flaky,
+                    non-deterministic tests dependent on internet connectivity
+                    and external mail servers, which violates the principle of
+                    isolated unit testing.
+                  </p>
                 </div>
               </div>
             </div>
@@ -504,7 +527,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/af9dd0547381ae2f58c8a52a42b828b5d4f6184b/server/api/mail/test/test_mail_address.py#L5-L157"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -513,18 +536,39 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Testing infrastructure visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--     ALT="TESTING INFRASTRUCTURE VISUAL"      -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    The above testing infrastructure uses on Python's native
+                    unittest module, which easily integrates with the VS Code
+                    IDE. Because the tests are cleanly separated into a test/
+                    subdirectory and use standard subclassing of
+                    unittest.TestCase, the VS Code Test Explorer automatically
+                    discovers them. This allows for single click execution
+                    directly from the IDE's sidebar.
+                  </p>
+                  <p>
+                    Because these are standard Python tests, they are easily
+                    invoked through GitHub Actions to act as a gatekeeper during
+                    pull requests. This testing infrastructure saved the time of
+                    manual debugging work. Testing email validation empirically
+                    would required spinning a SMTP server connection, injecting
+                    a test event, and waiting to see if the api was accepted.
+                    This was very troublesome for iterative development,
+                    automating the validation tests locally, allowed us to test
+                    much sooner in the email propagation process.
+                  </p>
                 </div>
               </div>
             </div>
@@ -562,7 +606,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://docs.google.com/document/d/1cdFzk3UV2gaSmzmGsmuN0kI_U16Rx8MmEJKYzuuh6mM/edit?tab=t.0"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -570,19 +614,47 @@ if __name__ == "__main__":
                   >
                 </h5>
               </div>
-              <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Need finding visual"
-                />
-              </div>
+              <!-------------------------------------------------->
+              <!--              <DIV CLASS="MB-4">              -->
+              <!--                     <IMG                     -->
+              <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+              <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+              <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+              <!--          ALT="NEED FINDING VISUAL"           -->
+              <!--                      />                      -->
+              <!--                    </DIV>                    -->
+              <!-------------------------------------------------->
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    I employed direct user interviews and persona development to
+                    uncover user needs. I interview with both close and distant
+                    individuals about the scheduling tools they currently use,
+                    how they find campus event information, and their biggest
+                    frustrations. These findings translated into three distinct
+                    scheduling users personas: "Schedule Super User," the "Stock
+                    Calendar User, and “Pen and Paper User".
+                  </p>
+                  <p>From this process I uncovered three distinct takeaways:</p>
+                  <ul>
+                    <li>
+                      Calendar Loyalty: highly attached to their current systems
+                      (Apple, Google, Outlook) and are not interested would not
+                      strongly new calendar service.
+                    </li>
+                    <li>
+                      Minimal Effort: While students want to know about campus
+                      events, they do not want to actively search for them
+                      across fractured platforms.
+                    </li>
+                    <li>
+                      Informational Soup: Existing resources like 25Live and
+                      Grinnell Events are clunky and struggle to find events
+                      relevant to their interests.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -617,7 +689,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://docs.google.com/document/d/1cdFzk3UV2gaSmzmGsmuN0kI_U16Rx8MmEJKYzuuh6mM/edit?tab=t.ljwcp7m8zkwr"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -626,18 +698,38 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Ideation visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--            ALT="IDEATION VISUAL"             -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    Along with the findings of my team we generated some
+                    potential feature ideas (indicated in above reference link)
+                    directly cross-referenced them with our specific user
+                    personas. This technique allowed us to evaluate whether each
+                    solution lowered user friction or inadvertently created new
+                    problems for specific archetypes. We also tested the
+                    proposed solutions directly with users to gauge their
+                    reactions.
+                  </p>
+                  <p>
+                    We ultimately pursued an automated platform that aggregates
+                    events from campus websites and pushes them directly as
+                    native calendar invites to the user's existing calendar. We
+                    chose this solution because it perfectly addressed the core
+                    needs discovered in need finding: zero friction (Minimal
+                    Effort) and direct integration into calendars users already
+                    use (Calendar Loyalty).
+                  </p>
                 </div>
               </div>
             </div>
@@ -672,7 +764,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://drive.google.com/drive/folders/1JiOInlEm958P6QBu19CgWXZClNE2s_Mz?usp=share_link"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -681,18 +773,43 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Prototyping visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--           ALT="PROTOTYPING VISUAL"           -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    Our primary design questions were: Is a single onboarding
+                    flow manageable? Does the interface look overwhelming or
+                    underwhelming? How do people feel about the interface and
+                    event selection process options? Is there general excitement
+                    and interest in the calendar invites concept?
+                  </p>
+                  <p>
+                    With Judd's great artistic prowess we utilized paper
+                    prototyping with some moving pieces to physically
+                    demonstrate the flow, placing a heavy focus on the
+                    onboarding experience rather than deep menu navigation.
+                  </p>
+                  <p>
+                    Our prototyping findings and further interviewing, confirmed
+                    massive general interest in the automated event
+                    consolidation, but users made it clear that the setup must
+                    be extremely easy. Regarding the interface and sorting
+                    options, I learned that broad filters would not work, users
+                    explicitly noted that if the sorting wasn't highly specific
+                    to their interests, the app would generate too much clutter,
+                    risking it becoming just as overwhelming as the existing
+                    campus calendars.
+                  </p>
                 </div>
               </div>
             </div>
@@ -727,7 +844,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://docs.google.com/document/d/1cdFzk3UV2gaSmzmGsmuN0kI_U16Rx8MmEJKYzuuh6mM/edit?tab=t.v053rucfyfrc"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -736,18 +853,62 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Evaluation visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--           ALT="EVALUATION VISUAL"            -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
                 <h6 class="fw-bold text-dark-custom">Description</h6>
                 <div class="competency-description text-dark-custom">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    I had users test the Minimum Viable Product (MVP) to gather
+                    feedback on user experience. My evaluation questions focused
+                    on whether the app was easily navigable, whether UI
+                    affordances were apparent to them, and general likes and
+                    dislikes. This was preceded with a very brief description of
+                    the product and preview of the UI.
+                  </p>
+                  <p>
+                    Users liked the clean UI, the minimal steps required to get
+                    events, and the fact that it integrated without replacing
+                    Google Calendar. However, the study revealed key friction
+                    points:
+                  </p>
+                  <ul>
+                    <li>Users struggled to find specific filtering options.</li>
+                    <li>
+                      Users realized they might still miss events without active
+                      push notifications to remind them to check their
+                      calendars.
+                    </li>
+                  </ul>
+                  <p>
+                    Reviewing user feedback, I identified several features to
+                    build next:
+                  </p>
+                  <ul>
+                    <li>
+                      Smart Conflict Checking: Implementing a feature that
+                      checks the user's calendar for conflicts before suggesting
+                      events
+                    </li>
+                    <li>
+                      Social Features: Adding the ability to see who else is
+                      going or to send invites directly to friends
+                    </li>
+                    <li>Targeted Filters: Creating a broad topic/category</li>
+                    <li>
+                      Push Notifications & Timing: Adding push notifications and
+                      the ability to schedule exactly what time the automated
+                      invites are sent to the use
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -785,7 +946,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/back-end/mail-daemon/server/api/mail/config.py#L1C1-L32C43"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -794,12 +955,14 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Self-learning visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--          ALT="SELF-LEARNING VISUAL"          -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
@@ -868,7 +1031,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://docs.google.com/presentation/d/1QDTzIofFKHrEtx-tFlcLLRxyVbK5tY-rPF3s42h4I5g/edit?usp=sharing"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -877,12 +1040,14 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Self-learning visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--          ALT="SELF-LEARNING VISUAL"          -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
@@ -950,7 +1115,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/orgs/social-won/projects/1"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -959,12 +1124,14 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Process visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--             ALT="PROCESS VISUAL"             -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
@@ -1029,7 +1196,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/pull/29"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1080,7 +1247,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/issues/24"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1133,7 +1300,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/pull/49"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1185,7 +1352,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="/content/social_won_grinvites_issue_24.html"
+                      href="https://github.com/social-won/grinvites/issues/24"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1261,7 +1428,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/back-end/mail-daemon/server/api/mail/iCal.py#L13-L139"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1270,12 +1437,14 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Domain architecture visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--       ALT="DOMAIN ARCHITECTURE VISUAL"       -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
@@ -1568,7 +1737,7 @@ if __name__ == "__main__":
                   <span class="text-secondary fw-light fst-italic fs-6"
                     >|
                     <a
-                      href="#"
+                      href="https://github.com/social-won/grinvites/blob/back-end/mail-daemon/server/api/mail/mail_exchange.py"
                       target="_blank"
                       class="text-secondary text-decoration-none"
                       >Reference Link</a
@@ -1577,12 +1746,14 @@ if __name__ == "__main__":
                 </h5>
               </div>
               <div class="mb-4">
-                <img
-                  src="/images/placeholder.webp"
-                  class="img-fluid rounded border w-100"
-                  style="max-height: 400px; object-fit: cover"
-                  alt="Quality visual"
-                />
+                <!-------------------------------------------------->
+                <!--                     <IMG                     -->
+                <!--        SRC="/IMAGES/PLACEHOLDER.WEBP"        -->
+                <!--    CLASS="IMG-FLUID ROUNDED BORDER W-100"    -->
+                <!-- STYLE="MAX-HEIGHT: 400PX; OBJECT-FIT: COVER" -->
+                <!--             ALT="QUALITY VISUAL"             -->
+                <!--                      />                      -->
+                <!-------------------------------------------------->
               </div>
               <hr class="mx-4 text-secondary opacity-25" />
               <div class="mt-4">
